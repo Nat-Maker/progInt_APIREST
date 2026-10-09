@@ -1,23 +1,74 @@
 {
-   "books": [
-      {
-         "id": 1,
-         "name": "The Great Gatsby",
-         "author": "F. Scott Fitzgerald",
-         "year": 1925
-      }, 
-        {
-            "id": 2,
-            "name": "To Kill a Mockingbird",
-            "author": "Harper Lee",
-            "year": 1960
-        }, 
-        {
-            "id": 3,
-            "name": "1984",
-            "author": "George Orwell",
-            "year": 1949
-        }
-
-   ] 
+  "books": [
+    {
+      "id": 1,
+      "name": "El Gran Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "year": 1925,
+      "image": "https://i.pinimg.com/236x/fe/a6/c8/fea6c8733d65253f67d43a9f54fe978c.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Matar a un ruiseñor",
+      "author": "Harper Lee",
+      "year": 1960,
+      "image": "https://i.pinimg.com/736x/52/c4/5e/52c45e2f8b708794bcc3653265d9211c.jpg"
+    },
+    {
+      "id": 3,
+      "name": "1984",
+      "author": "George Orwell",
+      "year": 1949,
+      "image": "https://i.pinimg.com/1200x/6f/cf/76/6fcf76874ffe4ba02a7c23fac931d17c.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Orgullo y Prejuicio",
+      "author": "Jane Austen",
+      "year": 1813,
+      "image": "https://i.pinimg.com/736x/21/6e/77/216e77cc19d1505302a509d478809ff1.jpg"
+    },
+    {
+      "id": 5,
+      "name": "El guardián entre el centeno",
+      "author": "J. D. Salinger",
+      "year": 1951,
+      "image": "https://i.pinimg.com/736x/35/95/1f/35951f202b10bfc4180fc00d117b5e7d.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Moby-Dick",
+      "author": "Herman Melville",
+      "year": 1851,
+      "image": "https://i.pinimg.com/736x/66/33/34/663334e043738b4a4b6732b12c813f61.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Cien años de soledad",
+      "author": "Gabriel García Márquez",
+      "year": 1967,
+      "image": "https://i.pinimg.com/1200x/5f/2b/8e/5f2b8ec490a157c9b9a9b122cd5d7f78.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Un mundo feliz",
+      "author": "Aldous Huxley",
+      "year": 1932,
+      "image": "https://i.pinimg.com/736x/e2/c1/50/e2c1508a0ce208e2e78e8cf7d8f7771a.jpg"
+    },
+    {
+      "id": 9,
+      "name": "El Hobbit",
+      "author": "J. R. R. Tolkien",
+      "year": 1937,
+      "image": "https://i.pinimg.com/736x/df/df/60/dfdf605b45df18275d69d9688fbd42cc.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Fahrenheit 451",
+      "author": "Ray Bradbury",
+      "year": 1953,
+      "image": "https://i.pinimg.com/736x/05/83/e1/0583e1d438989e2f24c1f59fb4be3a43.jpg"
+    }
+  ]
 }

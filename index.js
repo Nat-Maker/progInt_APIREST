@@ -2,35 +2,28 @@ import express from "express";
 import fs from "fs";
 
 const app = express();
+app.use(express.json());
+app.use(express.static("public"));
 
 const readData = () => {
-    try {
-    const data = fs.readFileSync("./db.json");
-    return JSON.parse(data);
-    } catch (error) {
+  try {
+    return JSON.parse(fs.readFileSync("./db.json"));
+  } catch (error) {
     console.log(error);
-    }
+  }
 };
 
 const writeData = (data) => {
-    try {
-    fs.writeFileSync("./db.json", JSON.stringify(data));
-    } catch (error) {
+  try {
+    fs.writeFileSync("./db.json", JSON.stringify(data, null, 2));
+  } catch (error) {
     console.log(error);
-    }
+  }
 };
 
-app.get("/", (req, res) => {
-  res.send("Si sirve!");
-});
-
 app.get("/books", (req, res) => {
-    const data = readData();
-    res.json(data.books);
-});
-
-app.get("/prueba", (req, res) => {
-  res.send("Esta es la versión nueva");
+  const data = readData();
+  res.json(data.books);
 });
 
 app.listen(3000, () => {

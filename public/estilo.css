@@ -1,0 +1,161 @@
+:root {
+  --escritorio: #2b4236;
+  --escritorio-oscuro: #1f3329;
+  --ficha: #f1e8d0;
+  --ficha-borde: #d8c9a3;
+  --linea: #a9bcc9;
+  --rojo: #b04a3d;
+  --tinta: #2d2a26;
+  --tinta-suave: #6b6256;
+  --latón: #c9a45c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(
+    ellipse at top,
+    var(--escritorio) 0%,
+    var(--escritorio-oscuro) 100%
+  );
+  color: var(--tinta);
+  font-family: "Special Elite", "Courier New", monospace;
+}
+
+.portada {
+  text-align: center;
+  padding: 3rem 1rem 1.5rem;
+  color: var(--ficha);
+}
+
+.portada h1 {
+  margin: 0;
+  font-family: "IM Fell English", Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(2.6rem, 8vw, 4.5rem);
+  letter-spacing: 0.04em;
+  color: var(--latón);
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.35);
+}
+
+.portada p {
+  margin: 0.4rem 0 0;
+  font-style: italic;
+  font-family: "IM Fell English", Georgia, serif;
+  font-size: 1.15rem;
+  opacity: 0.85;
+}
+
+.catalogo {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.75rem;
+}
+
+.aviso {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--ficha);
+}
+
+/* Ficha de catálogo */
+.ficha {
+  position: relative;
+  background-color: var(--ficha);
+  border: 1px solid var(--ficha-borde);
+  padding: 2.6rem 1.4rem 3.4rem 1.6rem;
+  min-height: 210px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+  background-image: linear-gradient(var(--linea) 1px, transparent 1px);
+  background-size: 100% 1.7rem;
+  background-position: 0 3.1rem;
+}
+
+/* línea roja superior */
+.ficha::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 2.4rem;
+  height: 2px;
+  background: var(--rojo);
+  opacity: 0.8;
+}
+
+/* agujero para la varilla */
+.ficha::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0.9rem;
+  width: 14px;
+  height: 14px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: var(--escritorio-oscuro);
+  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.ficha .numero {
+  position: absolute;
+  top: 0.55rem;
+  right: 1rem;
+  font-size: 0.85rem;
+  color: var(--rojo);
+}
+
+.ficha .autor {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.7rem;
+}
+
+.ficha .titulo {
+  margin: 0 0 0 1.5rem;
+  font-family: "IM Fell English", Georgia, serif;
+  font-style: italic;
+  font-size: 1.35rem;
+  line-height: 1.7rem;
+}
+
+.ficha .anio {
+  margin: 0 0 0 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.7rem;
+  color: var(--tinta-suave);
+}
+
+.ficha .imagen {
+  float: right;
+  width: 84px;
+  height: 120px;
+  object-fit: cover;
+  margin: 0.2rem 0 0.6rem 1rem;
+  border: 1px solid var(--ficha-borde);
+  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.35);
+  filter: sepia(0.35) contrast(0.95);
+}
+
+.ficha:hover {
+  transform: rotate(-0.6deg) translateY(-3px);
+}
+.ficha {
+  transition: transform 0.2s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ficha {
+    transition: none;
+  }
+  .ficha:hover {
+    transform: none;
+  }
+}
