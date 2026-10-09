@@ -1,4 +1,4 @@
-const URL_API = "db.JSON";
+const URL_API = "db.json";
 
 const catalogo = document.getElementById("catalogo");
 
