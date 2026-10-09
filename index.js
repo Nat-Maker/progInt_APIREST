@@ -3,11 +3,11 @@ import fs from "fs";
 
 const app = express();
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static("docs"));
 
 const readData = () => {
   try {
-    return JSON.parse(fs.readFileSync("./db.json"));
+    return JSON.parse(fs.readFileSync("./docs/db.json"));
   } catch (error) {
     console.log(error);
   }
@@ -15,7 +15,7 @@ const readData = () => {
 
 const writeData = (data) => {
   try {
-    fs.writeFileSync("./db.json", JSON.stringify(data, null, 2));
+    fs.writeFileSync("./docs/db.json", JSON.stringify(data, null, 2));
   } catch (error) {
     console.log(error);
   }

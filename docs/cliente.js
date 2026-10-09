@@ -1,4 +1,4 @@
-const URL_API = "/books";
+const URL_API = "db.JSON";
 
 const catalogo = document.getElementById("catalogo");
 
@@ -38,7 +38,7 @@ async function cargarLibros() {
         if (!respuesta.ok) throw new Error("Error " + respuesta.status);
         const datos = await respuesta.json();
 
-        catalogo.replaceChildren(...datos.map(crearFicha));
+        catalogo.replaceChildren(...datos.books.map(crearFicha));
     } catch (error) {
         catalogo.innerHTML =
             '<p class="aviso">No se pudo cargar el catálogo. Revisa la URL de la API o abre la página con Live Server.</p>';
